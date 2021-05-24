@@ -27,9 +27,8 @@ public class Controller {
         consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
         produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     
-    public String getShortUrlFromLongUrl(@RequestBody LongUrlData longUrlData){
-
-        return longUrlData.longUrl;
+    public LongUrlData getShortUrlFromLongUrl(@RequestBody LongUrlData longUrlData){
+        return longUrlData;
     }
 
     
