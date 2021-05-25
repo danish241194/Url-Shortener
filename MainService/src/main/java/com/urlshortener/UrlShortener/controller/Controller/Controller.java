@@ -33,7 +33,6 @@ public class Controller {
         produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     
     public ShortUrlResponseData getShortUrlFromLongUrl(@RequestBody LongUrlData longUrlData){
-        System.out.println("test");
         ShortUrlResponseData response = mainService.getShortUrl(longUrlData);
         return response;
     }
