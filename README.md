@@ -2,6 +2,9 @@
 
 ### Status : IN DEVELOPMENT
 
+
+### System Design (Using design of Code Karle)
+![alt text](https://www.codekarle.com/images/blog-images/tiny_url_non_redis_solution.png)
 ### Tech Stack Used
 ```
   1. Java Spring Boot
