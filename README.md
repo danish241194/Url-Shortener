@@ -1,6 +1,16 @@
-### Url Shortener
+## Url Shortener
 
-## Services 
+### Status : IN DEVELOPMENT
+
+### Tech Stack Used
+```
+  1. Java Spring Boot
+  2. Redis
+  3. MYSQL
+  4. Cassendra
+```
+
+### Services 
 
 ```
   1. Main Sevice
@@ -8,12 +18,15 @@
   3. Load Balancer Service Service
 ```
 
-## Tech Stack Used
+#### Main Service
+  1. This Service will get the requests for shortening or url or redirecting short url to the original one.
+  2. This Service will get counter tokens from Token Service When it start or when the tocken bucket gets empty
 ```
-  1. Java Spring Boot
-  2. Redis
-  3. MYSQL
-  4. Cassendra
+API 1 :  localhost.com:8080/{shorturl}
+      This API is responsible to redirect the request to the original url associated with the shorturl
+API 2:   localhost.com:8080/  with body as  {logUrl:'original Url'}
+      This API is reponsible to convert the long url to short url of length 7
 ```
+
 
 
