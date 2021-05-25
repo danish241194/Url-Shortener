@@ -19,7 +19,13 @@ public class Counter {
 
     public synchronized long next(){
        
-        if (nextValueToAssign == 0 || BasicFunctions.ended(nextValueToAssign)){
+        if (nextValueToAssign == 0 || nextValueToAssign==endValue) { 
+            /**
+             * This block will run if the next function is called
+             * first time or the assinged token bucket is empty
+             * 
+             **/ 
+
             CustomPair response = NextBatchFetcher.getNextBatch();
             this.startValue = response.startValue;
             this.endValue = response.endValue;
