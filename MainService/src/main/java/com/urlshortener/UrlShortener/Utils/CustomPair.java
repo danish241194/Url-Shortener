@@ -5,8 +5,8 @@ public class CustomPair {
     public long endValue;
 
     public CustomPair(){
-        this.startValue=0l;
-        this.endValue=0l;
+        this.startValue=Constants.UN_INITIALIZED;
+        this.endValue=Constants.UN_INITIALIZED;
     }
 
     public CustomPair(long startValue,long endValue){

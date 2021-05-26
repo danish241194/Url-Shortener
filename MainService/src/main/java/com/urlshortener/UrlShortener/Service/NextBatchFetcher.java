@@ -1,14 +1,18 @@
 package com.urlshortener.UrlShortener.Service;
 
+import com.urlshortener.UrlShortener.Config;
+import com.urlshortener.UrlShortener.Models.TokenGenResponse;
+import com.urlshortener.UrlShortener.Utils.Constants;
 import com.urlshortener.UrlShortener.Utils.CustomPair;
 
-public class NextBatchFetcher {
+import org.springframework.web.client.RestTemplate;
 
+public class NextBatchFetcher {
+    private static final RestTemplate restTemplate = new RestTemplate();;
     public static CustomPair getNextBatch(){
-        // api call to get next start and end value
-        long startValue = 1;
-        long endValue = 10;
-        return new CustomPair(startValue,endValue);
+        String url = Config.tokenGeneratorUrl;
+        TokenGenResponse response =  restTemplate.getForObject(url, TokenGenResponse.class);
+        return new CustomPair(response.startValue,response.endValue);
     }
     
 }

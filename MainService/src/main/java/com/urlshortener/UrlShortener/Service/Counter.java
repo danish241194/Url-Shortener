@@ -1,6 +1,7 @@
 package com.urlshortener.UrlShortener.Service;
 
 import com.urlshortener.UrlShortener.Utils.BasicFunctions;
+import com.urlshortener.UrlShortener.Utils.Constants;
 import com.urlshortener.UrlShortener.Utils.CustomPair;
 
 import org.springframework.stereotype.Service;
@@ -12,14 +13,14 @@ public class Counter {
     private long nextValueToAssign;
 
     public  Counter (){
-        this.startValue =0;
-        this.endValue = 0;
-        this.nextValueToAssign = this.startValue;
+        this.startValue =Constants.UN_INITIALIZED;
+        this.endValue = Constants.UN_INITIALIZED;
+        this.nextValueToAssign = Constants.UN_INITIALIZED;
     }
 
     public synchronized long next(){
        
-        if (nextValueToAssign==endValue) { 
+        if (startValue == Constants.UN_INITIALIZED ||  nextValueToAssign > endValue) { 
             /**
              * This block will run if the next function is called
              * first time or the assinged token bucket is empty
