@@ -22,12 +22,12 @@
 ```
 
 ### Setup Of MYSQL online
-
-```
 1. Create Account on www.freesqldatabase.com  for free we get 5MB
 2. Create Database then you will get email id which contains server hostname , username , password which can be used to 
     setup our connection
 3. In our application.properties add those details as
+
+```
 
   spring.jpa.hibernate.ddl-auto=update
   spring.datasource.url=jdbc:mysql://sql6.freesqldatabase.com:3306/sql6415689    // sql164158 here reference database name
