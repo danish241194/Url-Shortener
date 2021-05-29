@@ -20,12 +20,17 @@ public class Controller {
 
 
 
-    // localhost.com/shortcode
-    @GetMapping("/{shortCode}")
-    public String getLongUrlFromShortUrl(@PathVariable("shortCode") String shortCode){
-        return "Short Code : " + shortCode;
-    }
+    // // localhost.com/shortcode
+    // @GetMapping("/{shortCode}")
+    // public String getLongUrlFromShortUrl(@PathVariable("shortCode") String shortCode){
+    //     return "Short Code : " + shortCode;
+    // }
 
+
+    @GetMapping("/health")
+    public String health(){
+        return "Up";
+    }
     
     @PostMapping(
         value = "/",

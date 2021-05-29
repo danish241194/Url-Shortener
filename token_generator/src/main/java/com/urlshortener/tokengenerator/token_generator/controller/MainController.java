@@ -1,30 +1,39 @@
 package com.urlshortener.tokengenerator.token_generator.controller;
 
 import com.urlshortener.tokengenerator.token_generator.data.ResponseData;
+import com.urlshortener.tokengenerator.token_generator.services.MainService;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
-    long startValue;
-    long endValue;
+   @Autowired
+   MainService mainService;
 
-    MainController(){
-        startValue = 1;
-        endValue = 10;
+   MainController(){
+
     }
+
+    @GetMapping("health")
+    public ResponseData health(){
+        System.out.println("Received Request");
+
+        ResponseData response = mainService.getNextBucket(); 
+
+        System.out.println("Returning Data "+response.toString());
+        return response;
+    } 
 
     @GetMapping("/get_next_token")
     public ResponseData getNextToken(){
-
         System.out.println("Received Request");
 
-        ResponseData response = new ResponseData(startValue,endValue);
-        
-        startValue+=10;
-        endValue+=10;
-        System.out.println("Returned "+response.startValue+" - "+response.endValue);
+        ResponseData response = mainService.getNextBucket(); 
+        System.out.println("Returning Data "+response.toString());
+
         return response;
+        
     }
 }

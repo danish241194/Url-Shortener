@@ -14,7 +14,7 @@
 	<name>UrlShortener</name>
 	<description>Url Shortener Project with spring boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>16</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

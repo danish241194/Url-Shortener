@@ -8,4 +8,9 @@ public class ResponseData {
         this.startValue = startValue;
         this.endValue = endValue;
     }  
+
+    @Override
+    public String toString() {
+        return "{ "+this.startValue+" to "+ this.endValue +" }";
+    }
 }

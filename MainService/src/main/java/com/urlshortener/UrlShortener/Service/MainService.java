@@ -20,8 +20,8 @@ public class MainService {
     public ShortUrlResponseData getShortUrl(LongUrlData originalUrlData){
         String originalUrl = originalUrlData.longUrl;
         long value = counter.next();
-        // String shortUrlCode = Base62.encode(value);
-        ShortUrlResponseData responseData = new ShortUrlResponseData(originalUrl, ""+value);
+        String shortUrlCode = Base62.encode(value);
+        ShortUrlResponseData responseData = new ShortUrlResponseData(originalUrl,shortUrlCode);
         return responseData;
     }
     
