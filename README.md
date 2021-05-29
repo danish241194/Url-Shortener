@@ -21,6 +21,20 @@
   3. Load Balancer Service Service
 ```
 
+### Setup Of MYSQL online
+
+```
+1. Create Account on www.freesqldatabase.com  for free we get 5MB
+2. Create Database then you will get email id which contains server hostname , username , password which can be used to 
+    setup our connection
+3. In our application.properties add those details as
+
+  spring.jpa.hibernate.ddl-auto=update
+  spring.datasource.url=jdbc:mysql://sql6.freesqldatabase.com:3306/sql6415689    // sql164158 here reference database name
+  spring.datasource.username=sql6415689
+  spring.datasource.password=J8f6IELPgv
+
+```
 #### Main Service
   1. This Service will get the requests for shortening or url or redirecting short url to the original one.
   2. This Service will get counter tokens from Token Service When it start or when the tocken bucket gets empty
