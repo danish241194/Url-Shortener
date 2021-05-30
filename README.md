@@ -3,7 +3,7 @@
 ### Status : IN DEVELOPMENT
 
 
-### System Design (Using design of Code Karle)
+### System Design 
 
 ![alt text](https://www.linkpicture.com/q/url-shortener-system-design.png)
 
