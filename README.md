@@ -4,7 +4,6 @@
 
 
 ### System Design (Using design of Code Karle)
-![alt text](https://www.codekarle.com/images/blog-images/tiny_url_non_redis_solution.png)
 
 ![alt text](https://www.linkpicture.com/q/url-shortener-system-design.png)
 
