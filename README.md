@@ -5,6 +5,10 @@
 
 ### System Design (Using design of Code Karle)
 ![alt text](https://www.codekarle.com/images/blog-images/tiny_url_non_redis_solution.png)
+
+![alt text](https://drive.google.com/file/d/1cLbaCNV0PP0xJYTQEkKFtiiMTRBeJ52c/view)
+
+
 ### Tech Stack Used
 ```
   1. Java Spring Boot
